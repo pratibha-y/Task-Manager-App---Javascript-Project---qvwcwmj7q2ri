@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Task Manager App</title>
+    <script src="https://kit.fontawesome.com/011f7153aa.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="input-container" >
+        <input type="text" class="input-area" id="inpuText" placeholder="Add Task here....">
+        <button class="btn" id="add-task">Add Task</button>
+    </div>
+      <!------form Start-------->
+      <form action="#" id="form" class="hide-form"> 
+        <div class="form-body">
+            <div class="left-section">
+              <button class="btn1" id="save-task-data" >Save</button><br>
+  <label >Name</label><br>
+  <input id="task-name" class="input-disable" type="text"><br>
+  <label > Task</label><br>
+  <input id="task-title" class="input-disable" type="text"><br>
+  <label > Deadline</label><br>
+   <input id="task-date"  class="last-date input-disable" type="date">
+            </div>
+              <div class="right-section">
+                  <label >Discription</label><br> 
+                  <textarea id="task-description" class="input-disable" name="" id="" cols="30"></textarea><br>
+                  <label >Task priority </label><br>
+                    <textarea id="task-priority" class="input-disable" name="" id="" cols="30"></textarea>
+              </div>
+        </div>
+        <button class="btn2" onclick="enable()">Edit</button>
+      </form>
+      <!--------Form End-------->
+    <div class="main-container">
+    
+      <div class="open-box open" id="no_status">
+        <h1 id="h-id">Open</h1>
+         <div class="add-task  setter" id="drag-item-list" draggable="true" onclick="displayfun()">
+          <hr id="hr-line">
+        <p id="drag-item"></p> 
+        
+        <i class="fa-regular fa-circle" id="font-awesome"></i>
+       
+          </div>
+      </div>
+      <div class="open-box inProgress">
+        <h1 id="h-id">In Progress</h1>
+        
+      </div>
+      <div class="open-box inReview" >
+        <h1 id="h-id">In Review</h1>
+      </div>
+      <div class="open-box done" id="done-section">
+        <h1 id="h-id">Done</h1>
+      </div>
+    </div>
+ 
+    <script src="App.js"></script>
+  </body>
+</html>
 
